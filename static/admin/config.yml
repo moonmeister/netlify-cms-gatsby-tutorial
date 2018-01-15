@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: moonmeister/netlify-cms-gatsby-tutorial
 
 media_folder: static/assets
 
