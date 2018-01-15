@@ -7,7 +7,7 @@ module.exports = {
     options: {
       path: `${__dirname}/blog`,
       name: "markdown-pages",
+      },
     },
-  },
   ],
 }
