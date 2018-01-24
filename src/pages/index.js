@@ -2,9 +2,6 @@ import React from "react"
 import Search from '../components/Search';
 
 export default ({ data }) => {
-  const { currentSlug, edges, searchData } = this.props;
-    const { hits } = this.state;
-    console.log(hits);
   return (
     <div>
       <h1>Hello World!</h1>
