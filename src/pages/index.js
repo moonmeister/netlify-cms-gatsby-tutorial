@@ -1,6 +1,10 @@
 import React from "react"
+import Search from '../components/Search';
 
 export default ({ data }) => {
+  const { currentSlug, edges, searchData } = this.props;
+    const { hits } = this.state;
+    console.log(hits);
   return (
     <div>
       <h1>Hello World!</h1>
@@ -9,6 +13,15 @@ export default ({ data }) => {
           <li><a href={node.frontmatter.path}>{node.frontmatter.title}</a></li>
         )}
       </ul>
+
+      <Search
+          data={ data.siteSearchIndex }
+          onSearch={hits =>
+            this.setState({
+              hits,
+            })
+          }
+        />
   </div>
   )
 }
@@ -25,6 +38,9 @@ export const query = graphql`
           }
         }
       }
+    }
+    siteSearchIndex {
+      index
     }
   }
 `
